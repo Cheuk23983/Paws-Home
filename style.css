@@ -185,7 +185,11 @@ footer {
     align-items: center;
     padding: 10px 0;
     gap: 0.5rem;
-    font-size: 13px;
+    font-size: 12px;
+}
+
+footer .copyright {
+    text-align: center;
 }
 
 footer a {
