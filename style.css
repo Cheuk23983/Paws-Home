@@ -32,7 +32,9 @@ header {
 }
 
 .logo {
-    font-size: 8vw;
+    font-size: 7vw;
+    color:  #145f74;
+    
 }
 
 .burger-menu summary {
