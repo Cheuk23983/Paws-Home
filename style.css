@@ -37,6 +37,10 @@ header {
     
 }
 
+.destop-menu {
+    display: none;
+}
+
 .burger-menu summary {
     list-style: none;
     cursor: pointer;
@@ -87,8 +91,9 @@ header {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
-    padding: 10px;
+    padding: 15px 10px;
     max-width: 95%;
     margin: 0 auto;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -131,6 +136,13 @@ header {
     font-weight: 700;
     font-size: 18px;
     color: black;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.featured-btn:hover {
+    background-color:  #145f74;
+    color: white;
 }
 
 .pets-cards {
@@ -140,6 +152,7 @@ header {
     max-width: 95%;
     /* padding-inline: 0 10px; */
     margin: 0 auto;
+    align-self: flex-start; 
 }
 
 .container .pet-card {
@@ -151,6 +164,8 @@ header {
     flex-direction: column;
     margin: 0 auto;
     overflow: hidden;
+    min-height: 280px;
+    width: 100%;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
@@ -178,10 +193,16 @@ header {
     background-color: white;
     justify-self: flex-end;
     color: black;
+    cursor: pointer;
+}
+
+.pets-cards .pet-btn:hover {
+    background-color:  #145f74;
+    color: white;
 }
 
 footer {
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: #2b2e31;
     color: white;
     display: flex;
@@ -199,6 +220,10 @@ footer .copyright {
 footer a {
     color: white;
     text-decoration: none;
+}
+
+footer a:hover {
+    color: lightgray;
 }
 
 footer details {
@@ -237,6 +262,75 @@ footer .footer-socials {
         display: none;
     }
 
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        max-width: 90%; 
+        margin: 0 auto;
+    }
 
+    .featured-card {
+        align-self: flex-start;
+        width: 100%; 
+    }
+
+    .pets-cards {
+        /* display: grid; */
+        /* grid-template-columns: repeat(2, 1fr); */
+        gap: 1.5rem;
+        width: 100%;
+        align-self: flex-start; 
+    }
+
+    .container .pet-card {
+        width: 100%; 
+        min-height: 280px;
+    }
+
+    .pet-card img {
+        height: 140px; 
+        width: 100%;
+    }
     
+    footer {
+        font-size: 14px;
+        max-width: 88%;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+            "c s"
+            "a s"    
+        ;
+    }
+
+    footer .copyright {
+        grid-area: c;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    footer details .attributions {
+        grid-area: a;
+    }
+
+    footer details {
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    footer .footer-socials {
+        justify-self: flex-end;
+        grid-area: s;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .featured-card {
+        align-self: normal;
+    }
 }
