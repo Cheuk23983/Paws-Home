@@ -82,6 +82,13 @@ header {
     color: black;
 }
 
+.nav-link a:hover {
+    background-color: #f39200;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
 .container {
     display: grid;
     row-gap: 1rem;
